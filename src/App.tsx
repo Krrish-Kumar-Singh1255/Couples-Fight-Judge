@@ -143,7 +143,7 @@ function App() {
 
   const copyVerdict = () => {
     if (!verdict) return
-    const text = `COURT VERDICT: ${boyName} vs ${girlName}\nFault: ${girlName} ${verdict.girl_fault_percent}% | ${boyName} ${verdict.boy_fault_percent}%\n\nSentence: Regardless of fault, ${boyName} must apologize immediately.\n\nTry it at: [Your URL]`
+    const text = `COURT VERDICT: ${boyName} vs ${girlName}\nFault: ${girlName} ${verdict.girl_fault_percent}% | ${boyName} ${verdict.boy_fault_percent}%\n\nSentence: Regardless of fault, ${boyName} must apologize immediately.\n\nTry it at: https://couples-fight-judge.vercel.app`
     navigator.clipboard.writeText(text)
     alert('Verdict copied to clipboard!')
   }
