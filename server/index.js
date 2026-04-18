@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Initialize Google Generative AI
-const genAI = new GoogleGenerativeAI(process.env.VITE_GOOGLE_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
 // Cache to store verdicts and prevent repeated API calls for the same input
 const verdictCache = new Map();
@@ -40,7 +40,7 @@ app.post('/api/judge', async (req, res) => {
       return res.json(verdictCache.get(cacheKey));
     }
 
-    if (!process.env.VITE_GOOGLE_API_KEY) {
+    if (!process.env.GOOGLE_API_KEY) {
       return res.status(500).json({ error: { message: "Google API key is missing on the server." } });
     }
 
