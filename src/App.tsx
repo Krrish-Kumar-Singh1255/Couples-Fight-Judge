@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Gavel, Scale, AlertCircle, Share2, RefreshCw, ChevronRight } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 
 type VerdictData = {
   boy_fault_percent: number;
@@ -441,8 +442,9 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
+      <Analytics />
     </div>
-  </div>
   )
 }
 
