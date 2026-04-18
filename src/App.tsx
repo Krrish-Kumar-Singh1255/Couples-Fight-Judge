@@ -75,7 +75,7 @@ function App() {
     setStep(4);
 
     try {
-      const response = await fetch('http://localhost:3001/api/judge', {
+      const response = await fetch('https://couples-fight-judge-backend.onrender.com/api/judge', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
