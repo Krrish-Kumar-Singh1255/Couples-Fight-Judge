@@ -1,173 +1,165 @@
-# ⚖️ Couple Fight Judge
+# ⚖️ Couples Fight Judge
 
-**"Fair verdict. Unfair outcome."**
+<div align="center">
 
-Couple Fight Judge is a fun, AI-powered web application where couples present their arguments and a virtual **Relationship Court Judge** delivers a dramatic and analytical verdict.
+### *"Fair verdict. Unfair outcome."*
+
+🌐 **Live:** [couples-fight-judge.vercel.app](https://couples-fight-judge.vercel.app)
+
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Visit%20Now-gold?style=for-the-badge)](https://couples-fight-judge.vercel.app)
+[![Made with React](https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+[![Powered by Gemini](https://img.shields.io/badge/Powered%20by-Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google)](https://aistudio.google.com)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
+
+<br/>
+
+> 🔥 *An AI-powered Relationship Court where couples submit their fight — and the Judge always has the last word.*
+
+</div>
 
 ---
 
-## 🚀 Features
+## 🌐 Try It Live
 
-* 🧑‍⚖️ AI-powered verdicts using Google Gemini
-* 📊 Fault percentage breakdown (Boy vs Girl)
-* 🎭 Dramatic judge remarks & evidence points
-* 🔁 Smart caching for faster repeated results
-* 🎨 Smooth animations with Framer Motion
-* 📱 Responsive and interactive UI
-* 📋 Shareable verdict output
+<div align="center">
+
+| 🖥️ Frontend | ⚙️ Backend |
+|:---:|:---:|
+| [couples-fight-judge.vercel.app](https://couples-fight-judge.vercel.app) | [couples-fight-judge-backend.onrender.com](https://couples-fight-judge-backend.onrender.com) |
+
+</div>
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 🧑‍⚖️ AI Judge | Powered by Google Gemini 2.5 Flash for real, analytical verdicts |
+| 📊 Fault Meter | Visual percentage breakdown of who's more at fault |
+| 🎭 Dramatic Verdicts | Judge remarks, evidence points & an unfair sentence |
+| 🔁 Smart Caching | Same fight = instant result, no repeated API calls |
+| 🛡️ Fallback System | App never breaks even when API limit is hit |
+| 🌐 Hinglish Support | Works with English, Hindi, or mixed language input |
+| 🎨 Smooth Animations | Framer Motion powered transitions and loading states |
+| 📋 Share Verdict | Copy and share your verdict with one click |
+| 😄 Hidden Surprises | Decoy buttons, fake logout trap, and Easter eggs |
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
+### 🎨 Frontend
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 
-* React + TypeScript
-* Tailwind CSS
-* Framer Motion
-* Lucide Icons
+### ⚙️ Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=flat-square&logo=google&logoColor=white)
 
-### Backend
-
-* Node.js + Express
-* Google Generative AI (Gemini API)
-* dotenv
-
----
-
-## 📂 Project Structure
-
-```bash
-Couple-Fight-Judge/
-│── client/
-│   │── App.tsx
-│   │── main.tsx
-│   │── index.css
-│
-│── server/
-│   │── index.js
-│
-│── package.json
-│── README.md
-│── .env.example
-```
+### 🚀 Deployment
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)
 
 ---
 
 ## ⚙️ How It Works
 
-1. Users enter both sides of a couple's fight
-2. The data is sent to a backend API
-3. Backend forwards the request to Gemini AI
-4. AI analyzes the situation based on:
+```
+Boy enters his side  ──┐
+                        ├──▶  Backend API  ──▶  Gemini 2.5 Flash  ──▶  Verdict ⚖️
+Girl enters her side ──┘
+```
 
-   * Logic
-   * Emotional context
-   * Relationship behavior
-5. A structured verdict is returned with:
+The AI Judge analyzes:
+- 🧠 Logic & facts presented
+- 💬 Emotional context
+- 💑 Relationship behavior patterns
 
-   * Fault percentage
-   * Evidence points
-   * Judge remarks
+And delivers:
+- 📊 Fault percentage split
+- 🔍 Evidence findings
+- 🗣️ Judge remarks
+- ⚖️ The Sentence *(always unfair)*
 
 ---
 
-## 🔧 Installation & Setup
+## 🎮 How To Use
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/couple-fight-judge.git
-cd couple-fight-judge
+```
+1️⃣  Visit the live site
+2️⃣  Click "Settle This Fight" (careful — there are decoys 😄)
+3️⃣  Boy enters his side of the story
+4️⃣  Girl enters her side of the story
+5️⃣  Submit to the Judge ⚖️
+6️⃣  Receive your verdict 😈
+7️⃣  Share it and win the argument forever
 ```
 
-### 2. Install dependencies
+---
+
+## 🏗️ Run Locally
 
 ```bash
+# Clone the repo
+git clone https://github.com/Krrish-Kumar-Singh1255/Couples-Fight-Judge.git
+cd Couples-Fight-Judge
+
+# Install frontend dependencies
 npm install
-```
 
-For backend:
+# Install backend dependencies
+cd server && npm install
 
-```bash
-cd server
-npm install
-```
+# Add your Gemini API key in server/.env
+# (see .env.example for reference)
 
----
-
-### 3. Environment Variables
-
-Create a `.env` file inside the `server` folder:
-
-```env
-VITE_GOOGLE_API_KEY=your_api_key_here
-```
-
-Example (`.env.example`):
-
-```env
-VITE_GOOGLE_API_KEY=YOUR_API_KEY
-```
-
----
-
-### 4. Run the Project
-
-#### Frontend
-
-```bash
+# Run frontend
 npm run dev
-```
 
-#### Backend
-
-```bash
-cd server
-node index.js
+# Run backend
+cd server && node index.js
 ```
 
 ---
 
-## 🎮 Usage
+## 📌 Future Plans
 
-1. Click **"Settle This Fight"**
-2. Enter both sides of the story
-3. Submit to the judge ⚖️
-4. Get your verdict and sentence 😈
-
----
-
-## 📌 Future Improvements
-
-* 🌐 Live deployment (Frontend + Backend)
-* 🔗 Shareable public links
-* 📊 Enhanced AI reasoning
-* 😂 More dynamic and funny verdicts
+- [ ] 🔗 Unique shareable link per verdict
+- [ ] 🌍 Full multilingual support
+- [ ] 😂 More dramatic verdict styles
+- [ ] 📱 Mobile app version
+- [ ] 🏆 Verdict history leaderboard
 
 ---
 
 ## ⚠️ Disclaimer
 
-> This verdict is legally binding in **0 countries**.
+<div align="center">
+
+> *This verdict is legally binding in* **0 countries.**
+
+</div>
 
 ---
 
 ## 👨‍💻 Author
 
+<div align="center">
+
 **Krrish Kumar Singh**
 🚀 Team: **Night Owls**
 
----
-
-## ⭐ Support
-
-If you like this project:
-
-* ⭐ Star the repo
-* 🍴 Fork it
-* 📢 Share it
+[![GitHub](https://img.shields.io/badge/GitHub-Krrish--Kumar--Singh1255-181717?style=for-the-badge&logo=github)](https://github.com/Krrish-Kumar-Singh1255)
 
 ---
+
+⭐ *Star this repo if it made you laugh — or if you finally won an argument!*
 
 🔥 *Because every couple needs a judge... but not a fair one.*
+
+</div>
