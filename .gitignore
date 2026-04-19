@@ -1,3 +1,5 @@
 node_modules/
 .env
 npm_log.txt
+server/.env
+Supabase_pass.txt
