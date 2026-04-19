@@ -23,9 +23,9 @@
 
 <div align="center">
 
-| 🖥️ Frontend | ⚙️ Backend |
-|:---:|:---:|
-| [couples-fight-judge.vercel.app](https://couples-fight-judge.vercel.app) | [couples-fight-judge-backend.onrender.com](https://couples-fight-judge-backend.onrender.com) |
+| 🖥️ Frontend | ⚙️ Backend | 🗄️ Database |
+|:---:|:---:|:---:|
+| [Vercel](https://couples-fight-judge.vercel.app) | [Render](https://couples-fight-judge-backend.onrender.com) | [Supabase](https://supabase.com) |
 
 </div>
 
@@ -64,8 +64,12 @@
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
 ### 🚀 Deployment
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)
+
+| Platform | Purpose |
+|---|---|
+| Vercel | Frontend hosting |
+| Render | Backend hosting |
+| Supabase | Database & storage |
 
 ---
 
