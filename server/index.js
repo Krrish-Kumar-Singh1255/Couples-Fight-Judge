@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { createClient } from "@supabase/supabase-js";
 
 dotenv.config();
 
@@ -13,6 +14,12 @@ app.use(express.json());
 
 // Initialize Google Generative AI
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+
+// Initialize Supabase
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SECRET_KEY
+);
 
 // Cache to store verdicts and prevent repeated API calls for the same input
 const verdictCache = new Map();
@@ -48,11 +55,9 @@ app.post("/api/judge", async (req, res) => {
     }
 
     if (!process.env.GOOGLE_API_KEY) {
-      return res
-        .status(500)
-        .json({
-          error: { message: "Google API key is missing on the server." },
-        });
+      return res.status(500).json({
+        error: { message: "Google API key is missing on the server." },
+      });
     }
 
     const model = genAI.getGenerativeModel({
@@ -107,7 +112,7 @@ app.post("/api/judge", async (req, res) => {
 
     if (startIdx === -1 || endIdx === -1) {
       throw new Error(
-        "The Judge failed to deliver a structured verdict. Please try again.",
+        "The Judge failed to deliver a structured verdict. Please try again."
       );
     }
 
@@ -121,6 +126,28 @@ app.post("/api/judge", async (req, res) => {
     if (verdictCache.size > 100) {
       const firstKey = verdictCache.keys().next().value;
       verdictCache.delete(firstKey);
+    }
+
+    // Save to Supabase (only real verdicts, not fallbacks)
+    try {
+      await supabase.from("fights").insert({
+        boy_name: normalizedData.boyName,
+        girl_name: normalizedData.girlName,
+        boy_story: normalizedData.boyStory,
+        girl_story: normalizedData.girlStory,
+        boy_complaint: normalizedData.boyComplaint,
+        girl_complaint: normalizedData.girlComplaint,
+        boy_fault_percent: parsedVerdict.boy_fault_percent,
+        girl_fault_percent: parsedVerdict.girl_fault_percent,
+        primary_fault: parsedVerdict.primary_fault,
+        judge_remarks: parsedVerdict.judge_remarks,
+        evidence_points: parsedVerdict.evidence_points,
+        is_fallback: false,
+      });
+      console.log("Fight saved to Supabase!");
+    } catch (dbError) {
+      // Don't fail the request if DB save fails
+      console.error("Supabase save error:", dbError);
     }
 
     res.json(parsedVerdict);
