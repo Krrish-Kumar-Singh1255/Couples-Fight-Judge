@@ -41,6 +41,7 @@
 | 🔁 Smart Caching | Same fight = instant result, no repeated API calls |
 | 🛡️ Fallback System | App never breaks even when API limit is hit |
 | 🌐 Hinglish Support | Works with English, Hindi, or mixed language input |
+| 🗄️ Fight Storage | Every verdict saved to Supabase database |
 | 🎨 Smooth Animations | Framer Motion powered transitions and loading states |
 | 📋 Share Verdict | Copy and share your verdict with one click |
 | 😄 Hidden Surprises | Decoy buttons, fake logout trap, and Easter eggs |
@@ -60,6 +61,7 @@
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=flat-square&logo=google&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
 ### 🚀 Deployment
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
@@ -72,7 +74,9 @@
 ```
 Boy enters his side  ──┐
                         ├──▶  Backend API  ──▶  Gemini 2.5 Flash  ──▶  Verdict ⚖️
-Girl enters her side ──┘
+Girl enters her side ──┘                                                    │
+                                                                            ▼
+                                                                    Saved to Supabase 🗄️
 ```
 
 The AI Judge analyzes:
@@ -115,7 +119,7 @@ npm install
 # Install backend dependencies
 cd server && npm install
 
-# Add your Gemini API key in server/.env
+# Add your keys in server/.env
 # (see .env.example for reference)
 
 # Run frontend
